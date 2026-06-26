@@ -1,0 +1,6 @@
+{
+  "name": "LoveSpin: Android Dating App",
+  "description": "Premium Android Dating App & Simulator with a realistic 'Spin the Bottle' game, virtual gifts, hearts rewards, dynamic chat with AI advisor, and full Jetpack Compose Kotlin source code.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
