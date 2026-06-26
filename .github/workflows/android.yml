@@ -23,9 +23,13 @@ jobs:
 
     - name: Generate Gradle Wrapper
       run: |
-        cd android
-        gradle wrapper
-        chmod +x gradlew
+        mkdir temp-gradle
+        cd temp-gradle
+        gradle wrapper --gradle-version 8.2
+        cd ..
+        cp -r temp-gradle/gradlew temp-gradle/gradlew.bat temp-gradle/gradle android/
+        rm -rf temp-gradle
+        chmod +x android/gradlew
 
     - name: Build Debug APK
       run: |
