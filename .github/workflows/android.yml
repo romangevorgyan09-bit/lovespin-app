@@ -21,20 +21,15 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
-    - name: Generate Gradle Wrapper
-      run: |
-        mkdir temp-gradle
-        cd temp-gradle
-        gradle wrapper --gradle-version 8.2
-        cd ..
-        cp -r temp-gradle/gradlew temp-gradle/gradlew.bat temp-gradle/gradle android/
-        rm -rf temp-gradle
-        chmod +x android/gradlew
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v4
+      with:
+        gradle-version: 8.2
 
     - name: Build Debug APK
       run: |
         cd android
-        ./gradlew assembleDebug
+        gradle assembleDebug
 
     - name: Upload Compiled APK
       uses: actions/upload-artifact@v4
