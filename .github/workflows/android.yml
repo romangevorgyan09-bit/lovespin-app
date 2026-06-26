@@ -24,9 +24,7 @@ jobs:
     - name: Generate Gradle Wrapper
       run: |
         cd android
-        if [ ! -f "gradlew" ]; then
-          gradle wrapper --gradle-version 8.2
-        fi
+        gradle wrapper
         chmod +x gradlew
 
     - name: Build Debug APK
