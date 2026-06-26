@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.LoveSpin" parent="android:Theme.Material.NoActionBar">
+        <item name="android:statusBarColor">#000000</item>
+    </style>
+    <style name="Theme.LoveSpin.NoActionBar" parent="android:Theme.Material.NoActionBar">
+        <item name="android:statusBarColor">#000000</item>
+    </style>
+</resources>
